@@ -23,8 +23,19 @@ function crearTarea(nuevaTarea) {
   }
   arregloTareas.push(nuevaTarea)
   localStorage.setItem('items', JSON.stringify(arregloTareas))
+  contadorPendientes();
   location.reload()
   
 }
 displayFooter()
 displayItems()
+
+function contadorPendientes(){
+  const pendingCount = arregloTareas.filter(task => !task.complete).length;
+  const countElement = document.querySelector('.todo-count strong');
+  countElement.textContent = pendingCount;
+}
+
+window.addEventListener('load', () => {
+  contadorPendientes();
+})
