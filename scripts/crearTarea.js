@@ -26,5 +26,5 @@ function crearTarea(nuevaTarea) {
   location.reload()
   
 }
-displayItems()
 displayFooter()
+displayItems()
