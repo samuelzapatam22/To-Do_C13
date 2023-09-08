@@ -1,27 +1,26 @@
-/* 
-El siguiente código lo podrás usar para renderizar en tu front el footer 
-donde están ubicados los botones de filtro, de tu aplicación
-*/
 function displayFooter() {
   let page = `
-
       <footer class="footer">
-
-        <span class="todo-count"><strong></strong> pendiente(s)</span>
-
         <ul class="filters">
           <li>
-            <a class="selected filtro" href="#/">Todos</a>
+          <span class="todo-count""><strong></strong> pendiente(s)</span>
           </li>
           <li>
-            <a class="filtro" href="#/active">Pendientes</a>
+            <a class="selected filtro" href="#/" onclick="showAll()">Todos</a>
           </li>
           <li>
-            <a class="filtro" href="#/completed">Completados</a>
+            <a class="filtro" href="#/active" onclick="showPendientes()">Pendientes</a>
+          </li>
+          <li>
+            <a class="filtro" href="#/completed" onclick="showCompletadas()">Completadas</a>
+          </li>
+          <li>
+          <button class="clear-completed">Borrar completados</button>
           </li>
         </ul>
-        <button class="clear-completed">Borrar completados</button>
+        
       </footer>
-    `
-  document.querySelector('.footer').innerHTML = page
+    `;
+  document.querySelector('.footer').innerHTML = page;
 }
+

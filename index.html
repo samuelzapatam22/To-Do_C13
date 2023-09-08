@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="Recursos/planificacion-de-tareas.png" type="image/x-icon">
         <!-- Enlace con el archivo de estilos -->
         <link rel="stylesheet"
         href="style.css" />
         <!-- Enlace con los estilos de los iconos editar y eliminar tarea  -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <title>ToDo-App C13</title>
+        <!-- Enlace con la fuente del sistema-->
+       
 </head>
 
 <body>
   <section class="todoApp">
     <header class="header">
-      <h1>Mis Tareas</h1>
+      <h1>Tareas</h1>
       <input class="new-todo"
              placeholder="Ingresar Tarea"
-             autofocus />
+             autofocus
+             style="text-align: left;"/>
     </header>
+    <br>
     <section class="main">
       <ul class="todo-list"></ul>
     </section>
+    <button class="clear-completed">Eliminar Completadas</button>
     <section class="footer"></section>
     <script src="scripts/displayFooter.js"></script>
+    <script src="scripts/botonesFooter.js"></script>
     <script src="scripts/displayItems.js"></script>
     <script src="scripts/crearTarea.js"></script>
     <script src="scripts/elimintarTarea.js"></script>
