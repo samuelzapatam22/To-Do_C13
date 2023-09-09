@@ -1,7 +1,4 @@
-/* 
-El siguiente código lo podrás usar para renderizar en tu front el panel de 
-cada tarea de tu aplicación
-*/
+
 function displayItems() {
   let items = ''
   for (let i = 0; i < arregloTareas.length; i++) {
@@ -10,7 +7,7 @@ function displayItems() {
                       <input class="toggle" type="checkbox" id="check_${i}" ${
       arregloTareas[i].complete ? 'checked' : ''
     } />
-                      <textarea disabled>${arregloTareas[i].thing}</textarea>
+                      <textarea disabled class="texto-tareas">${arregloTareas[i].thing}</textarea>
                       <div class="edit-controller">
                         <div>
                           Prioridad
@@ -68,9 +65,9 @@ function displayItems() {
                   </div>`
   }
   document.querySelector('.todo-list').innerHTML = items
-  activateCheckboxListeners()
-  activateDeleteListeners()
-  activateEditListeners()
-  activateSaveListeners()
-  activateCancelListeners()
+  //activateCheckboxListeners()
+  //activateDeleteListeners()
+  //activateEditListeners()
+  //activateSaveListeners()
+  //activateCancelListeners()
 }
