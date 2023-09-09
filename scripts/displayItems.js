@@ -65,9 +65,10 @@ function displayItems() {
                   </div>`
   }
   document.querySelector('.todo-list').innerHTML = items
-  //activateCheckboxListeners()
-  //activateDeleteListeners()
-  //activateEditListeners()
-  //activateSaveListeners()
-  //activateCancelListeners()
+   activateCheckboxListeners()
+   activateDeleteListeners()
+   activateEditListeners()
+   activateSaveListeners()
+   activateCancelListeners()
+  
 }
