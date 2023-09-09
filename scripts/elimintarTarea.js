@@ -26,4 +26,27 @@ function obtenerIndiceTarea(taskContainer) {
     return -1;
 }
 
+document.querySelector('.clear-completed').addEventListener('click', () => {
+    const completadas = arregloTareas.filter(task => task.complete);
+    if (completadas.length > 0) {
+      completadas.forEach(completada => {
+        const taskContainer = obtenerContenedorDeTarea(completada);
+        if (taskContainer) {
+          eliminarTarea(taskContainer);
+        }
+      });
+    }
+  });
+  
+  
+  function obtenerContenedorDeTarea(tarea) {
+    const taskElements = document.querySelectorAll('.item');
+    for (let i = 0; i < taskElements.length; i++) {
+      const taskIndex = obtenerIndiceTarea(taskElements[i]);
+      if (taskIndex !== -1 && arregloTareas[taskIndex] === tarea) {
+        return taskElements[i];
+      }
+    }
+    return null;
+  }
 
